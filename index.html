@@ -9,6 +9,7 @@
         header { background-color: #333; padding: 30px 20px; text-align: center; border-bottom: 5px solid #d4a017; }
         h1 { margin: 0; font-size: 2.5em; text-transform: uppercase; letter-spacing: 2px; }
         
+        /* Navigation */
         nav { margin-top: 20px; }
         .nav-link { color: #d4a017; text-decoration: none; font-size: 1.2em; margin: 0 20px; font-weight: bold; text-transform: uppercase; }
         .nav-link:hover { color: #fff; }
@@ -16,12 +17,12 @@
 
         .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
         
-        /* Material Grid */
+        /* Text-Only Material Grid */
         .material-grid { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 20px; justify-content: space-between; }
-        .material-card { background: #2a2a2a; padding: 10px; width: 18%; min-width: 150px; border-radius: 8px; border: 1px solid #444; }
-        .material-card img { width: 100%; height: 80px; object-fit: cover; border-radius: 4px; margin-bottom: 5px; }
-        .material-pros { font-size: 0.8em; color: #8bc34a; }
-        .material-cons { font-size: 0.8em; color: #f44336; }
+        .material-card { background: #2a2a2a; padding: 20px; width: 18%; min-width: 150px; border-radius: 8px; border: 1px solid #444; text-align: center; }
+        .material-card h3 { font-size: 1.2em; margin: 0 0 10px 0; color: #fff; border-bottom: 1px solid #444; padding-bottom: 10px; }
+        .material-pros { font-size: 0.9em; color: #8bc34a; margin: 5px 0; }
+        .material-cons { font-size: 0.9em; color: #f44336; margin: 5px 0; }
 
         /* Gallery */
         .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
@@ -50,13 +51,13 @@
         </section>
 
         <section>
-            <h2>Material Guide</h2>
+            <h2>Material Selection Guide</h2>
             <div class="material-grid">
-                <div class="material-card"><img src="images/wood_maple.jpg"><h3>Maple</h3><p class="material-pros">✓ Detail</p><p class="material-cons">✗ Burns</p></div>
-                <div class="material-card"><img src="images/wood_ash.jpg"><h3>Ash</h3><p class="material-pros">✓ Grain</p><p class="material-cons">✗ Tear-out</p></div>
-                <div class="material-card"><img src="images/wood_pine.jpg"><h3>Pine</h3><p class="material-pros">✓ Cheap</p><p class="material-cons">✗ Soft</p></div>
-                <div class="material-card"><img src="images/material_plastic.jpg"><h3>Plastic</h3><p class="material-pros">✓ Clean</p><p class="material-cons">✗ Melts</p></div>
-                <div class="material-card"><img src="images/material_foam.jpg"><h3>Foam</h3><p class="material-pros">✓ Fast</p><p class="material-cons">✗ Messy</p></div>
+                <div class="material-card"><h3>Maple</h3><p class="material-pros">✓ High Detail</p><p class="material-cons">✗ Burn Risk</p></div>
+                <div class="material-card"><h3>Ash</h3><p class="material-pros">✓ Strong Grain</p><p class="material-cons">✗ Tear-out</p></div>
+                <div class="material-card"><h3>Pine</h3><p class="material-pros">✓ Low Cost</p><p class="material-cons">✗ Soft / Fuzzy</p></div>
+                <div class="material-card"><h3>Plastic</h3><p class="material-pros">✓ Clean Finish</p><p class="material-cons">✗ Heat Sensitive</p></div>
+                <div class="material-card"><h3>Foam</h3><p class="material-pros">✓ Fast 3D</p><p class="material-cons">✗ Not Structural</p></div>
             </div>
         </section>
 
