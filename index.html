@@ -8,13 +8,13 @@
         * { box-sizing: border-box; }
         body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background-color: #1a1a1a; color: #e0e0e0; }
         
-        /* HEADER - Updated to include Top Border */
+        /* HEADER */
         header img { 
             width: 100%; 
             height: auto; 
             display: block; 
-            border-top: 4px solid #cda434;    /* Gold Border at TOP */
-            border-bottom: 4px solid #cda434; /* Keeping Bottom for symmetry (remove if you only want top) */
+            border-top: 4px solid #cda434;    
+            border-bottom: 4px solid #cda434; 
         }
         
         /* NAV */
@@ -23,23 +23,47 @@
         nav a:hover { color: #fff; }
         nav a.active-page { color: #fff; text-decoration: underline; }
         
-        /* CONTENT */
-        .hero-section { text-align: center; padding: 60px 20px; }
+        /* HERO SECTION */
+        .hero-section { text-align: center; padding: 60px 20px; border-bottom: 1px solid #333; }
         h1 { color: #cda434; font-size: 2.5em; text-transform: uppercase; letter-spacing: 2px; }
         p.intro { max-width: 800px; margin: 0 auto; font-size: 1.2em; line-height: 1.6; color: #ccc; }
         .btn { display: inline-block; background-color: #cda434; color: #000; padding: 15px 30px; margin-top: 30px; text-decoration: none; font-weight: bold; border-radius: 4px; text-transform: uppercase; }
         .btn:hover { background-color: #fff; }
+
+        /* ABOUT SECTION (Your Garage/CNC Story) */
+        .about-section { background-color: #000; padding: 50px 20px; text-align: center; border-bottom: 1px solid #333; }
+        .about-content { max-width: 900px; margin: 0 auto; }
+        .about-content h2 { color: #cda434; font-size: 2em; margin-bottom: 20px; text-transform: uppercase; }
+        .about-content p { font-size: 1.1em; line-height: 1.8; color: #ccc; margin-bottom: 20px; }
+
+        /* PROJECT IDEAS GRID */
+        .ideas-section { padding: 50px 20px; max-width: 1200px; margin: 0 auto; }
+        .ideas-title { text-align: center; color: #cda434; font-size: 2em; margin-bottom: 40px; text-transform: uppercase; }
         
-        /* FOOTER - Updated Styles */
-        footer { text-align: center; padding: 30px; background-color: #000; color: #666; margin-top: 50px; border-top: 1px solid #333; }
+        .ideas-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .idea-card { background-color: #222; padding: 30px; border-left: 4px solid #cda434; }
+        .idea-card h3 { color: #fff; margin-top: 0; font-size: 1.4em; }
+        .idea-card ul { list-style-type: none; padding: 0; }
+        .idea-card li { color: #ccc; margin-bottom: 10px; font-size: 1.1em; }
+        .idea-card li::before { content: "•"; color: #cda434; font-weight: bold; display: inline-block; width: 1em; margin-left: -1em; }
+
+        /* FEATURED PHOTOS */
+        .featured-section { padding: 50px 20px; text-align: center; background-color: #111; border-top: 1px solid #333; }
+        .featured-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .featured-item { border: 1px solid #333; overflow: hidden; transition: transform 0.3s; }
+        .featured-item:hover { transform: translateY(-5px); border-color: #cda434; }
+        .featured-item img { width: 100%; height: 250px; object-fit: cover; display: block; opacity: 0.9; }
+        .featured-item:hover img { opacity: 1; }
+        .featured-caption { background-color: #000; padding: 15px; color: #fff; font-weight: bold; }
+
+        /* FOOTER */
+        footer { text-align: center; padding: 30px; background-color: #000; color: #666; border-top: 1px solid #333; }
         .contact-info { color: #cda434; font-weight: bold; margin-bottom: 10px; font-size: 1.1em; }
-        .contact-info span { margin: 0 10px; color: #fff; } /* Separator style */
+        .contact-info span { margin: 0 10px; color: #fff; }
     </style>
 </head>
 <body>
-
     <header><img src="images/header_logo.jpg" alt="Frank Harley Custom Woodworking"></header>
-
     <nav>
         <a href="index.html" class="active-page">HOME</a>
         <a href="gallery.html">GALLERY</a>
@@ -54,12 +78,78 @@
         <a href="gallery.html" class="btn">View Our Work</a>
     </div>
 
+    <div class="about-section">
+        <div class="about-content">
+            <h2>Locally Owned & Family Run</h2>
+            <p>
+                Frank Harley Custom Woodworking is a proud family-run business based right here in Indianapolis. 
+                What started in our garage has grown into a fully capable precision workshop. We combine traditional 
+                craftsmanship with modern technology to create one-of-a-kind pieces.
+            </p>
+            <p>
+                Our shop features advanced equipment, including <strong>two large-format 1500mm x 1500mm CNC machines</strong> 
+                (a WorkBee 1515 and an Oxman by Bulkman 3D) and a specialized <strong>CNC Lathe</strong>. 
+                This powerful setup allows us to handle everything from intricate 3D carvings to large-scale custom furniture with exact precision.
+            </p>
+        </div>
+    </div>
+
+    <div class="ideas-section">
+        <h2 class="ideas-title">What We Can Build For You</h2>
+        <div class="ideas-grid">
+            <div class="idea-card">
+                <h3>Custom Signage</h3>
+                <ul>
+                    <li>Business Logos & Branding</li>
+                    <li>Family Name Signs</li>
+                    <li>Wedding & Event Signs</li>
+                    <li>3D Carved Plaques</li>
+                </ul>
+            </div>
+            <div class="idea-card">
+                <h3>Home Decor & Gifts</h3>
+                <ul>
+                    <li>Custom Wall Clocks</li>
+                    <li>Charcuterie & Serving Boards</li>
+                    <li>Detailed 3D Relief Maps</li>
+                    <li>Holiday Decorations</li>
+                </ul>
+            </div>
+            <div class="idea-card">
+                <h3>Furniture & Parts</h3>
+                <ul>
+                    <li>Live Edge Tables</li>
+                    <li>Custom Chair Parts</li>
+                    <li>Precision Turned Spindles</li>
+                    <li>CNC Prototyping Services</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="featured-section">
+        <h2 class="section-title" style="color: #cda434; font-size: 2em; margin-bottom: 30px; text-transform: uppercase;">Recent Work</h2>
+        <div class="featured-grid">
+            <div class="featured-item">
+                <img src="images/live2.jpg" alt="Live Edge Table">
+                <div class="featured-caption">Live Edge Tables</div>
+            </div>
+            <div class="featured-item">
+                <img src="images/jack.jpg" alt="Custom Sign">
+                <div class="featured-caption">Custom Signs</div>
+            </div>
+            <div class="featured-item">
+                <img src="images/beds.jpg" alt="Custom Furniture">
+                <div class="featured-caption">Handmade Furniture</div>
+            </div>
+        </div>
+    </div>
+
     <footer>
         <div class="contact-info">
             Phone: (555) 123-4567 <span>|</span> Email: frank@example.com
         </div>
         &copy; 2024 Frank Harley Custom Woodworking
     </footer>
-
 </body>
 </html>
