@@ -3,20 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Orders - Frank Harley Custom Woodworking</title>
+    <title>Custom - Frank Harley Custom Woodworking</title>
     <style>
-        /* --- GLOBAL STYLES --- */
         * { box-sizing: border-box; }
         body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background-color: #1a1a1a; color: #e0e0e0; }
-
-        /* --- HEADER & NAV --- */
         header img { width: 100%; height: auto; display: block; border-bottom: 4px solid #cda434; }
         nav { background-color: #333; text-align: center; padding: 15px 0; border-bottom: 2px solid #cda434; }
         nav a { color: #cda434; text-decoration: none; margin: 0 20px; font-size: 18px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s; }
         nav a:hover { color: #fff; }
         nav a.active-page { color: #fff; text-decoration: underline; }
-
-        /* --- FORM STYLES --- */
         h1.page-title { text-align: center; margin: 40px 0 20px; color: #cda434; font-size: 2em; text-transform: uppercase; letter-spacing: 2px; }
         .form-container { max-width: 600px; margin: 0 auto 60px; padding: 30px; background-color: #000; border: 1px solid #333; border-radius: 8px; }
         label { display: block; margin-bottom: 10px; font-weight: bold; color: #cda434; }
@@ -24,38 +19,29 @@
         input:focus, textarea:focus { border-color: #cda434; outline: none; }
         .submit-btn { width: 100%; padding: 15px; background-color: #cda434; color: #000; font-weight: bold; font-size: 18px; border: none; cursor: pointer; text-transform: uppercase; transition: background 0.3s; }
         .submit-btn:hover { background-color: #fff; }
-
         footer { text-align: center; padding: 20px; background-color: #000; color: #666; margin-top: auto; }
     </style>
 </head>
 <body>
-
     <header><img src="images/header.jpg" alt="Frank Harley Custom Woodworking"></header>
-
     <nav>
         <a href="index.html">HOME</a>
         <a href="gallery.html">GALLERY</a>
-        <a href="custom.html" class="active-page">CUSTOM ORDERS</a>
-        <a href="shop.html">SHOP PLANS</a>
+        <a href="custom.html" class="active-page">CUSTOM</a>
+        <a href="shop.html">SHOP</a>
     </nav>
-
     <h1 class="page-title">Request a Custom Build</h1>
-
     <div class="form-container">
         <form>
             <label for="name">Your Name</label>
             <input type="text" id="name" name="name" placeholder="Enter your name">
-
             <label for="email">Email Address</label>
             <input type="email" id="email" name="email" placeholder="Enter your email">
-
             <label for="message">Project Description</label>
             <textarea id="message" name="message" rows="6" placeholder="Tell me about what you want built..."></textarea>
-
             <button type="submit" class="submit-btn">Send Request</button>
         </form>
     </div>
-
     <footer>&copy; 2024 Frank Harley Custom Woodworking</footer>
 </body>
 </html>
