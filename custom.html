@@ -7,18 +7,39 @@
     <style>
         * { box-sizing: border-box; }
         body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background-color: #1a1a1a; color: #e0e0e0; }
+        
+        /* HEADER */
         header img { width: 100%; height: auto; display: block; border-bottom: 4px solid #cda434; }
+        
+        /* NAV */
         nav { background-color: #333; text-align: center; padding: 15px 0; border-bottom: 2px solid #cda434; }
         nav a { color: #cda434; text-decoration: none; margin: 0 20px; font-size: 18px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s; }
         nav a:hover { color: #fff; }
         nav a.active-page { color: #fff; text-decoration: underline; }
+        
+        /* FORM STYLES */
         h1.page-title { text-align: center; margin: 40px 0 20px; color: #cda434; font-size: 2em; text-transform: uppercase; letter-spacing: 2px; }
         .form-container { max-width: 600px; margin: 0 auto 60px; padding: 30px; background-color: #000; border: 1px solid #333; border-radius: 8px; }
-        label { display: block; margin-bottom: 10px; font-weight: bold; color: #cda434; }
-        input, textarea { width: 100%; padding: 12px; margin-bottom: 20px; background-color: #222; border: 1px solid #444; color: #fff; font-size: 16px; border-radius: 4px; }
-        input:focus, textarea:focus { border-color: #cda434; outline: none; }
-        .submit-btn { width: 100%; padding: 15px; background-color: #cda434; color: #000; font-weight: bold; font-size: 18px; border: none; cursor: pointer; text-transform: uppercase; transition: background 0.3s; }
+        
+        label { display: block; margin-bottom: 10px; font-weight: bold; color: #cda434; margin-top: 10px; }
+        
+        /* This styles inputs, text areas AND the new dropdown menus */
+        input, textarea, select { 
+            width: 100%; 
+            padding: 12px; 
+            margin-bottom: 20px; 
+            background-color: #222; 
+            border: 1px solid #444; 
+            color: #fff; 
+            font-size: 16px; 
+            border-radius: 4px; 
+        }
+        
+        input:focus, textarea:focus, select:focus { border-color: #cda434; outline: none; }
+        
+        .submit-btn { width: 100%; padding: 15px; background-color: #cda434; color: #000; font-weight: bold; font-size: 18px; border: none; cursor: pointer; text-transform: uppercase; transition: background 0.3s; margin-top: 10px; }
         .submit-btn:hover { background-color: #fff; }
+        
         footer { text-align: center; padding: 20px; background-color: #000; color: #666; margin-top: auto; }
     </style>
 </head>
@@ -30,18 +51,45 @@
         <a href="custom.html" class="active-page">CUSTOM</a>
         <a href="shop.html">SHOP</a>
     </nav>
+    
     <h1 class="page-title">Request a Custom Build</h1>
+    
     <div class="form-container">
         <form>
             <label for="name">Your Name</label>
             <input type="text" id="name" name="name" placeholder="Enter your name">
+
             <label for="email">Email Address</label>
             <input type="email" id="email" name="email" placeholder="Enter your email">
-            <label for="message">Project Description</label>
-            <textarea id="message" name="message" rows="6" placeholder="Tell me about what you want built..."></textarea>
+
+            <label for="object-type">What are we building?</label>
+            <select id="object-type" name="object-type">
+                <option value="" disabled selected>Select an object type...</option>
+                <option value="chair">Chair / Furniture</option>
+                <option value="sign">Custom Sign</option>
+                <option value="clock">Clock</option>
+                <option value="decor">Home Decor</option>
+                <option value="other">Other / Custom Project</option>
+            </select>
+
+            <label for="material">Preferred Material</label>
+            <select id="material" name="material">
+                <option value="" disabled selected>Select a material...</option>
+                <option value="wood">Wood</option>
+                <option value="plastic">Plastic</option>
+                <option value="aluminum">Aluminum</option>
+            </select>
+
+            <label for="dimensions">Approximate Dimensions</label>
+            <input type="text" id="dimensions" name="dimensions" placeholder="e.g. 4ft x 8ft, or 12 inches round">
+
+            <label for="message">Additional Details</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me any specific details about the design..."></textarea>
+
             <button type="submit" class="submit-btn">Send Request</button>
         </form>
     </div>
+    
     <footer>&copy; 2024 Frank Harley Custom Woodworking</footer>
 </body>
 </html>
