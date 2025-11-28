@@ -5,29 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frank's CNC & Woodshop</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background-color: #1a1a1a; color: #f0f0f0; }
-        header { background-color: #333; padding: 30px 20px; text-align: center; border-bottom: 5px solid #d4a017; }
-        h1 { margin: 0; font-size: 2.5em; text-transform: uppercase; letter-spacing: 2px; }
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2a2a2a; /* Dark background to match the wood */
+            color: #f0f0f0; 
+        }
+
+        /* HEADER SECTION */
+        header {
+            background-color: #111;
+            padding: 0;
+            text-align: center;
+            border-bottom: 4px solid #d4a017;
+        }
         
-        nav { margin-top: 20px; }
+        .header-logo {
+            width: 100%;
+            max-width: 800px; /* Keeps the business card image from getting too huge */
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        /* NAVIGATION */
+        nav { 
+            background-color: #333; 
+            padding: 15px 0; 
+            border-bottom: 1px solid #444;
+        }
         .nav-link { color: #d4a017; text-decoration: none; font-size: 1.2em; margin: 0 20px; font-weight: bold; text-transform: uppercase; }
         .nav-link:hover { color: #fff; }
         .nav-link.active { color: #fff; border-bottom: 2px solid #fff; }
 
-        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+        /* CONTENT CONTAINER */
+        .container { 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            padding: 30px; 
+        }
         
-        /* Gallery */
-        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
-        .project-card { background: #2a2a2a; padding: 15px; border-radius: 8px; text-align: center; border: 1px solid #444; }
+        /* SECTIONS & CARDS */
+        .material-grid { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 20px; justify-content: space-between; }
+        .material-card, .project-card { 
+            background: #333; 
+            padding: 15px; 
+            border-radius: 8px; 
+            border: 1px solid #555; 
+            text-align: center; 
+            width: 18%; 
+            min-width: 150px;
+        }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; }
+        
+        /* IMAGES */
+        .material-card img { width: 100%; height: 80px; object-fit: cover; border-radius: 4px; margin-bottom: 5px; }
         .project-card img { width: 100%; border-radius: 5px; }
 
-        .btn { background-color: #d4a017; color: black; padding: 15px 30px; text-decoration: none; font-weight: bold; border-radius: 5px; display: inline-block; margin-top: 20px; font-size: 1.1em; }
+        /* BUTTONS */
+        .btn { 
+            background-color: #d4a017; 
+            color: black; 
+            padding: 15px 30px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            border-radius: 5px; 
+            display: inline-block; 
+            margin-top: 20px; 
+            font-size: 1.1em; 
+        }
         .btn:hover { background-color: #fff; }
+        
+        /* TEXT COLORS */
+        .material-pros { font-size: 0.9em; color: #8bc34a; margin: 5px 0; }
+        .material-cons { font-size: 0.9em; color: #f44336; margin: 5px 0; }
+        h3 { margin: 10px 0; color: #fff; }
     </style>
 </head>
 <body>
     <header>
-        <h1>Frank's CNC Works</h1>
+        <img src="images/header_logo.jpg" alt="Frank Harley Custom Woodworking" class="header-logo">
+        
         <nav>
             <a href="index.html" class="nav-link active">Home</a>
             <a href="custom.html" class="nav-link">Custom Orders</a>
@@ -42,6 +102,17 @@
             <a href="custom.html" class="btn">Start a Custom Project</a>
         </section>
 
+        <section>
+            <h2>Material Selection Guide</h2>
+            <div class="material-grid">
+                <div class="material-card"><h3>Maple</h3><p class="material-pros">✓ High Detail</p><p class="material-cons">✗ Burn Risk</p></div>
+                <div class="material-card"><h3>Ash</h3><p class="material-pros">✓ Strong Grain</p><p class="material-cons">✗ Tear-out</p></div>
+                <div class="material-card"><h3>Pine</h3><p class="material-pros">✓ Low Cost</p><p class="material-cons">✗ Soft</p></div>
+                <div class="material-card"><h3>Plastic</h3><p class="material-pros">✓ Clean Finish</p><p class="material-cons">✗ Heat Sensitive</p></div>
+                <div class="material-card"><h3>Foam</h3><p class="material-pros">✓ Fast 3D</p><p class="material-cons">✗ Not Structural</p></div>
+            </div>
+        </section>
+
         <section style="margin-top: 40px;">
             <h2>Recent Projects</h2>
             <div class="gallery">
@@ -51,9 +122,9 @@
             </div>
         </section>
         
-        <section style="text-align: center; margin-top: 50px; padding: 20px; border-top: 1px solid #333;">
-            <p style="color: #aaa;">Call/Text: <a href="tel:+12064658772" style="color: #d4a017;">(206) 465-8772</a></p>
-            <p style="color: #aaa;">Email: gounderfrank@gmail.com</p>
+        <section style="text-align: center; margin-top: 50px; padding: 20px; border-top: 1px solid #555;">
+            <p style="color: #ccc;">Call/Text: <a href="tel:+12064658772" style="color: #d4a017; font-weight:bold;">(206) 465-8772</a></p>
+            <p style="color: #ccc;">Email: gounderfrank@gmail.com</p>
         </section>
     </div>
 </body>
