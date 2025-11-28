@@ -10,25 +10,20 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            
-            /* DARK WOOD BACKGROUND */
             background-image: url('images/wood_bg.jpg');
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
-            
-            /* Text Color: White */
             color: #f0f0f0; 
         }
 
-        /* HEADER SECTION */
+        /* HEADER */
         header {
             padding: 0;
             margin: 0;
             border-bottom: 4px solid #d4a017;
             background-color: #111;
         }
-        
         .header-logo {
             width: 100%;
             max-width: 100%;
@@ -49,29 +44,36 @@
         .nav-link:hover { color: #fff; }
         .nav-link.active { color: #fff; border-bottom: 2px solid #fff; }
 
-        /* CONTENT CONTAINER */
+        /* CONTAINER */
         .container { 
             max-width: 1000px; 
             margin: 0 auto; 
             padding: 30px; 
-            background-color: rgba(0, 0, 0, 0.85); /* Dark box */
+            background-color: rgba(0, 0, 0, 0.85); 
             margin-top: 30px;
             border-radius: 10px;
             border: 1px solid #444;
         }
         
-        /* Gallery Grid */
-        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; }
+        /* GRIDS */
+        .grid-3 { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 30px; justify-content: space-between; }
         
-        /* Cards */
-        .project-card { 
+        /* CARDS */
+        .card { 
             background: #333; 
-            padding: 15px; 
+            padding: 20px; 
             border-radius: 8px; 
             border: 1px solid #555; 
             text-align: center; 
+            width: 30%; 
+            min-width: 250px;
+            flex-grow: 1;
         }
-        .project-card img { width: 100%; border-radius: 5px; }
+        .card img { width: 100%; border-radius: 5px; }
+        
+        /* ICONS & NUMBERS */
+        .icon { font-size: 2em; color: #d4a017; margin-bottom: 10px; display: block; }
+        .step-number { font-size: 2.5em; color: #d4a017; font-weight: bold; display: block; margin-bottom: 5px; }
 
         /* BUTTONS */
         .btn { 
@@ -87,14 +89,13 @@
         }
         .btn:hover { background-color: #fff; }
         
-        /* Typography */
         h3 { margin: 10px 0; color: #fff; }
+        h2 { border-bottom: 2px solid #555; padding-bottom: 10px; margin-top: 50px; text-transform: uppercase; letter-spacing: 1px; }
     </style>
 </head>
 <body>
     <header>
         <img src="images/header_logo.jpg" alt="Frank Harley Custom Woodworking" class="header-logo">
-        
         <nav>
             <a href="index.html" class="nav-link active">Home</a>
             <a href="custom.html" class="nav-link">Custom Orders</a>
@@ -109,12 +110,54 @@
             <a href="custom.html" class="btn">Start a Custom Project</a>
         </section>
 
-        <section style="margin-top: 40px;">
+        <section>
+            <h2>Our Services</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <span class="icon">🪚</span>
+                    <h3>Slab Flattening</h3>
+                    <p style="color:#ccc; font-size:0.9em;">I can plane rough live-edge slabs perfectly flat up to 60" wide.</p>
+                </div>
+                <div class="card">
+                    <span class="icon">📐</span>
+                    <h3>CNC Cutting</h3>
+                    <p style="color:#ccc; font-size:0.9em;">Precision parts for cabinets, templates, and furniture.</p>
+                </div>
+                <div class="card">
+                    <span class="icon">🔥</span>
+                    <h3>Laser Engraving</h3>
+                    <p style="color:#ccc; font-size:0.9em;">Custom logo burning and personalization on wood or leather.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>How It Works</h2>
+            <div class="grid-3">
+                <div class="card" style="background: #2a2a2a; border-color: #444;">
+                    <span class="step-number">1</span>
+                    <h3>Request</h3>
+                    <p style="color:#ccc; font-size:0.9em;">Fill out the quote form with your idea and dimensions.</p>
+                </div>
+                <div class="card" style="background: #2a2a2a; border-color: #444;">
+                    <span class="step-number">2</span>
+                    <h3>Design</h3>
+                    <p style="color:#ccc; font-size:0.9em;">I send you a digital proof to approve before cutting.</p>
+                </div>
+                <div class="card" style="background: #2a2a2a; border-color: #444;">
+                    <span class="step-number">3</span>
+                    <h3>Build</h3>
+                    <p style="color:#ccc; font-size:0.9em;">I fabricate your piece and ship it directly to you.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
             <h2>Recent Projects</h2>
-            <div class="gallery">
-                <div class="project-card"><img src="images/nice clock.jpg"><h3>Custom Decor</h3></div>
-                <div class="project-card"><img src="images/long flatpack bench.jpg"><h3>Flatpack Furniture</h3></div>
-                <div class="project-card"><img src="images/weed stuff.jpg"><h3>Accessories</h3></div>
+            <div class="grid-3">
+                <div class="card"><img src="images/nice clock.jpg"><h3>Custom Decor</h3></div>
+                <div class="card"><img src="images/long flatpack bench.jpg"><h3>Flatpack Furniture</h3></div>
+                <div class="card"><img src="images/weed stuff.jpg"><h3>Accessories</h3></div>
             </div>
         </section>
         
