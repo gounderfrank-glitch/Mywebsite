@@ -3,101 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Gallery - Frank's CNC</title>
+    <title>Gallery - Frank Harley Custom Woodworking</title>
     <style>
-        /* --- BASIC PAGE SETUP --- */
+        /* --- RESET & BASICS --- */
+        * { box-sizing: border-box; }
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4; /* Light grey background */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a1a; /* Dark charcoal background */
+            color: #e0e0e0; /* Light text */
         }
 
-        /* --- NAVIGATION (Matches your screenshot) --- */
+        /* --- HEADER IMAGE --- */
+        header img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 4px solid #cda434; /* Gold border below header */
+        }
+
+        /* --- NAVIGATION --- */
         nav {
-            background-color: #333;
+            background-color: #000;
             text-align: center;
             padding: 15px 0;
         }
         nav a {
             color: #fff;
             text-decoration: none;
-            margin: 0 20px;
-            font-weight: bold;
+            margin: 0 25px;
             font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: color 0.3s;
         }
         nav a:hover {
-            color: #daa520; /* Gold color on hover */
+            color: #cda434; /* Gold glow on hover */
         }
 
-        /* --- GALLERY GRID STYLES --- */
+        /* --- PAGE TITLE --- */
+        .page-title {
+            text-align: center;
+            margin: 40px 0 20px;
+            color: #cda434;
+            font-size: 2em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* --- GALLERY GRID --- */
         .gallery-container {
             max-width: 1200px;
-            margin: 40px auto;
+            margin: 0 auto 60px; /* Centered with bottom spacing */
             padding: 0 20px;
             display: grid;
-            /* This creates columns automatically. Minimum width 300px, otherwise it wraps. */
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
+            gap: 30px;
         }
 
         .gallery-item {
-            background-color: white;
-            padding: 10px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.2s; /* Smooth zoom effect */
+            position: relative;
+            background-color: #000;
+            border: 1px solid #333;
+            overflow: hidden; /* Keeps image inside border */
+            transition: transform 0.3s ease, border-color 0.3s ease;
         }
 
         .gallery-item:hover {
-            transform: scale(1.02); /* Slight zoom when mouse hovers */
+            transform: translateY(-5px); /* Lifts up slightly */
+            border-color: #cda434; /* Gold border on hover */
         }
 
         .gallery-item img {
             width: 100%;
-            height: auto;
-            border-radius: 4px;
+            height: 300px; /* Forces uniform height */
+            object-fit: cover; /* Crops image to fit nicely without stretching */
             display: block;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+
+        .gallery-item:hover img {
+            opacity: 1; /* Brightens on hover */
         }
 
         .gallery-caption {
-            margin-top: 10px;
+            padding: 15px;
+            text-align: center;
+            background-color: #111;
+            color: #cda434;
             font-weight: bold;
-            color: #555;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #000;
+            color: #666;
+            font-size: 0.8rem;
+            margin-top: auto;
         }
     </style>
 </head>
 <body>
 
+    <header>
+        <img src="header.jpg" alt="Frank Harley Custom Woodworking Header">
+    </header>
+
     <nav>
-        <a href="index.html">HOME</a>
-        <a href="gallery.html">GALLERY</a>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
     </nav>
 
+    <h1 class="page-title">Current Projects</h1>
+
     <div class="gallery-container">
-        
+
         <div class="gallery-item">
             <img src="jack.jpg" alt="Jack Project">
-            <div class="gallery-caption">Jack Project</div>
+            <div class="gallery-caption">Custom "Jack" Piece</div>
         </div>
 
         <div class="gallery-item">
-            <img src="live1.jpg" alt="Live Edge Project 1">
-            <div class="gallery-caption">Live Edge Work 1</div>
+            <img src="live1.jpg" alt="Live Edge Table 1">
+            <div class="gallery-caption">Live Edge Slab 01</div>
         </div>
 
         <div class="gallery-item">
-            <img src="live2.jpg" alt="Live Edge Project 2">
-            <div class="gallery-caption">Live Edge Work 2</div>
+            <img src="live2.jpg" alt="Live Edge Table 2">
+            <div class="gallery-caption">Live Edge Slab 02</div>
         </div>
 
         <div class="gallery-item">
-            <img src="punisher.jpg" alt="Punisher Project">
-            <div class="gallery-caption">The Punisher</div>
+            <img src="punisher.jpg" alt="Punisher Logo Woodwork">
+            <div class="gallery-caption">The Punisher Theme</div>
         </div>
 
     </div>
+
+    <footer>
+        &copy; 2024 Frank Harley Custom Woodworking
+    </footer>
 
 </body>
 </html>
