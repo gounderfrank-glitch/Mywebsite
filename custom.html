@@ -7,7 +7,7 @@
     <style>
         body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background-image: url('images/wood_bg.jpg'); background-size: cover; background-attachment: fixed; background-position: center; color: #f0f0f0; }
         header { padding: 0; margin: 0; border-bottom: 4px solid #d4a017; background-color: #111; }
-        .header-logo { width: 100%; max-width: 100%; height: auto; display: block; margin: 0; padding: 0; }
+        .header-logo { width: 100%; max-width: 100%; height: auto; display: block; }
         
         nav { background-color: #333; padding: 15px 0; text-align: center; border-bottom: 1px solid #444; }
         .nav-link { color: #d4a017; text-decoration: none; font-size: 1.2em; margin: 0 20px; font-weight: bold; text-transform: uppercase; }
@@ -41,18 +41,16 @@
             <p style="text-align: center; font-size: 1.1em; margin-bottom: 20px;">Fill out the details below. I will review your specs and email you a price quote.</p>
             
             <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
-                
                 <fieldset>
                     <legend>Step 1: Project Type</legend>
                     <select name="project-type" required>
                         <option value="">-- Choose Item Type --</option>
                         <option value="Custom Sign">Custom Sign / V-Carve</option>
                         <option value="Furniture">Flatpack Furniture</option>
-                        <option value="Accessories">Accessories (Trays, Boxes)</option>
+                        <option value="Accessories">Accessories</option>
                         <option value="3D Carve">3D Relief Carving</option>
                     </select>
                 </fieldset>
-
                 <fieldset>
                     <legend>Step 2: Material & Size</legend>
                     <select name="material" required>
@@ -65,7 +63,6 @@
                     </select>
                     <input type="text" name="dimensions" placeholder="Approx. Dimensions (e.g. 24x24 inch)" required>
                 </fieldset>
-
                 <fieldset>
                     <legend>Step 3: Contact & Details</legend>
                     <textarea name="details" placeholder="Describe your idea..." required></textarea>
@@ -73,7 +70,6 @@
                     <input type="email" name="email" placeholder="Your Email" required>
                     <input type="tel" name="phone" placeholder="Phone Number">
                 </fieldset>
-                
                 <button type="submit" class="btn">Submit Request</button>
             </form>
         </div>
