@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Custom Orders - Frank's CNC</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background-color: #1a1a1a; color: #f0f0f0; }
-        header { background-color: #333; padding: 30px 20px; text-align: center; border-bottom: 5px solid #d4a017; }
-        h1 { margin: 0; font-size: 2.5em; text-transform: uppercase; letter-spacing: 2px; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background-image: url('images/wood_bg.jpg'); background-size: cover; background-attachment: fixed; background-position: center; color: #f0f0f0; }
+        header { padding: 0; margin: 0; border-bottom: 4px solid #d4a017; background-color: #111; }
+        .header-logo { width: 100%; max-width: 100%; height: auto; display: block; }
         
-        nav { margin-top: 20px; }
+        nav { background-color: #333; padding: 15px 0; text-align: center; border-bottom: 1px solid #444; }
         .nav-link { color: #d4a017; text-decoration: none; font-size: 1.2em; margin: 0 20px; font-weight: bold; text-transform: uppercase; }
         .nav-link:hover { color: #fff; }
         .nav-link.active { color: #fff; border-bottom: 2px solid #fff; }
 
-        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; background-color: rgba(0,0,0,0.85); margin-top: 30px; border-radius: 10px; border: 1px solid #444; }
         .form-box { background-color: #222; padding: 40px; border-radius: 10px; border: 1px solid #444; margin-top: 20px; }
         
         input, textarea, select { width: 100%; padding: 12px; margin: 8px 0; display: inline-block; border: 1px solid #555; border-radius: 4px; box-sizing: border-box; background-color: #333; color: white; font-family: inherit; }
@@ -27,7 +27,7 @@
 </head>
 <body>
     <header>
-        <h1>Request A Quote</h1>
+        <img src="images/header_logo.jpg" alt="Frank Harley Custom Woodworking" class="header-logo">
         <nav>
             <a href="index.html" class="nav-link">Home</a>
             <a href="custom.html" class="nav-link active">Custom Orders</a>
@@ -37,9 +37,10 @@
 
     <div class="container">
         <div class="form-box">
-            <p style="text-align: center;">Fill out the details below. I will review your specs and email you a price quote.</p>
+            <p style="text-align: center; font-size: 1.1em; margin-bottom: 20px;">Fill out the details below. I will review your specs and email you a price quote.</p>
             
             <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+                
                 <fieldset>
                     <legend>Step 1: Project Type</legend>
                     <select name="project-type" required>
