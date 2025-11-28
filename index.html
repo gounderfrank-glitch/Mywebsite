@@ -10,14 +10,15 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #2a2a2a; 
-            color: #f0f0f0; 
             
-            /* Background Texture for the whole page */
+            /* DARK WOOD BACKGROUND */
             background-image: url('images/wood_bg.jpg');
             background-size: cover;
             background-attachment: fixed;
             background-position: center;
+            
+            /* Text Color: White */
+            color: #f0f0f0; 
         }
 
         /* HEADER SECTION */
@@ -29,8 +30,8 @@
         }
         
         .header-logo {
-            width: 100%;        /* Force image to fill width */
-            max-width: 100%;    /* Remove the 800px limit */
+            width: 100%;
+            max-width: 100%;
             height: auto;
             display: block;
             margin: 0;
@@ -53,26 +54,23 @@
             max-width: 1000px; 
             margin: 0 auto; 
             padding: 30px; 
-            background-color: rgba(0, 0, 0, 0.85); /* Dark box for readability */
+            background-color: rgba(0, 0, 0, 0.85); /* Dark box */
             margin-top: 30px;
             border-radius: 10px;
             border: 1px solid #444;
         }
         
-        /* SECTIONS & CARDS */
-        .material-grid { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 20px; justify-content: space-between; }
-        .material-card, .project-card { 
+        /* Gallery Grid */
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; }
+        
+        /* Cards */
+        .project-card { 
             background: #333; 
             padding: 15px; 
             border-radius: 8px; 
             border: 1px solid #555; 
             text-align: center; 
-            width: 18%; 
-            min-width: 150px;
         }
-        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; }
-        
-        /* IMAGES */
         .project-card img { width: 100%; border-radius: 5px; }
 
         /* BUTTONS */
@@ -89,9 +87,7 @@
         }
         .btn:hover { background-color: #fff; }
         
-        /* TEXT COLORS */
-        .material-pros { font-size: 0.9em; color: #8bc34a; margin: 5px 0; }
-        .material-cons { font-size: 0.9em; color: #f44336; margin: 5px 0; }
+        /* Typography */
         h3 { margin: 10px 0; color: #fff; }
     </style>
 </head>
@@ -111,17 +107,6 @@
             <h2>Precision Woodworking & CNC Services</h2>
             <p style="font-size: 1.1em; color: #ccc;">From custom signs to flatpack furniture, if you can picture it, I can make it.</p>
             <a href="custom.html" class="btn">Start a Custom Project</a>
-        </section>
-
-        <section>
-            <h2>Material Selection Guide</h2>
-            <div class="material-grid">
-                <div class="material-card"><h3>Maple</h3><p class="material-pros">✓ High Detail</p><p class="material-cons">✗ Burn Risk</p></div>
-                <div class="material-card"><h3>Ash</h3><p class="material-pros">✓ Strong Grain</p><p class="material-cons">✗ Tear-out</p></div>
-                <div class="material-card"><h3>Pine</h3><p class="material-pros">✓ Low Cost</p><p class="material-cons">✗ Soft</p></div>
-                <div class="material-card"><h3>Plastic</h3><p class="material-pros">✓ Clean Finish</p><p class="material-cons">✗ Heat Sensitive</p></div>
-                <div class="material-card"><h3>Foam</h3><p class="material-pros">✓ Fast 3D</p><p class="material-cons">✗ Not Structural</p></div>
-            </div>
         </section>
 
         <section style="margin-top: 40px;">
