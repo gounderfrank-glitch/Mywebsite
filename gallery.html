@@ -11,16 +11,16 @@
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #1a1a1a; /* Dark charcoal background */
-            color: #e0e0e0; /* Light text */
+            background-color: #1a1a1a; 
+            color: #e0e0e0;
         }
 
-        /* --- HEADER IMAGE --- */
+        /* --- HEADER --- */
         header img {
             width: 100%;
             height: auto;
             display: block;
-            border-bottom: 4px solid #cda434; /* Gold border below header */
+            border-bottom: 4px solid #cda434;
         }
 
         /* --- NAVIGATION --- */
@@ -40,7 +40,7 @@
             transition: color 0.3s;
         }
         nav a:hover {
-            color: #cda434; /* Gold glow on hover */
+            color: #cda434;
         }
 
         /* --- PAGE TITLE --- */
@@ -56,7 +56,7 @@
         /* --- GALLERY GRID --- */
         .gallery-container {
             max-width: 1200px;
-            margin: 0 auto 60px; /* Centered with bottom spacing */
+            margin: 0 auto 60px;
             padding: 0 20px;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -67,26 +67,26 @@
             position: relative;
             background-color: #000;
             border: 1px solid #333;
-            overflow: hidden; /* Keeps image inside border */
+            overflow: hidden;
             transition: transform 0.3s ease, border-color 0.3s ease;
         }
 
         .gallery-item:hover {
-            transform: translateY(-5px); /* Lifts up slightly */
-            border-color: #cda434; /* Gold border on hover */
+            transform: translateY(-5px);
+            border-color: #cda434;
         }
 
         .gallery-item img {
             width: 100%;
-            height: 300px; /* Forces uniform height */
-            object-fit: cover; /* Crops image to fit nicely without stretching */
+            height: 300px;
+            object-fit: cover;
             display: block;
             opacity: 0.9;
             transition: opacity 0.3s;
         }
 
         .gallery-item:hover img {
-            opacity: 1; /* Brightens on hover */
+            opacity: 1;
         }
 
         .gallery-caption {
@@ -97,10 +97,9 @@
             font-weight: bold;
             letter-spacing: 1px;
             text-transform: uppercase;
-            font-size: 0.9rem;
+            font-size: 1rem;
         }
 
-        /* --- FOOTER --- */
         footer {
             text-align: center;
             padding: 20px;
@@ -114,7 +113,7 @@
 <body>
 
     <header>
-        <img src="header.jpg" alt="Frank Harley Custom Woodworking Header">
+        <img src="header.jpg" alt="header">
     </header>
 
     <nav>
@@ -128,43 +127,43 @@
     <div class="gallery-container">
 
         <div class="gallery-item">
-            <img src="live2.jpg" alt="Live Edge Project 2">
-            <div class="gallery-caption">Live Edge Work 02</div>
+            <img src="live2.jpg" alt="live2">
+            <div class="gallery-caption">live2</div>
         </div>
 
         <div class="gallery-item">
-            <img src="jack.jpg" alt="Jack Project">
-            <div class="gallery-caption">Custom "Jack" Piece</div>
+            <img src="jack.jpg" alt="jack">
+            <div class="gallery-caption">jack</div>
         </div>
 
         <div class="gallery-item">
-            <img src="live1.jpg" alt="Live Edge Project 1">
-            <div class="gallery-caption">Live Edge Work 01</div>
+            <img src="live1.jpg" alt="live1">
+            <div class="gallery-caption">live1</div>
         </div>
 
         <div class="gallery-item">
-            <img src="home.jpg" alt="Home Decor Project">
-            <div class="gallery-caption">Custom Home Decor</div>
+            <img src="home.jpg" alt="home">
+            <div class="gallery-caption">home</div>
         </div>
 
         <div class="gallery-item">
-            <img src="family.jpg" alt="Family Sign Project">
-            <div class="gallery-caption">Family Name Sign</div>
+            <img src="family.jpg" alt="family">
+            <div class="gallery-caption">family</div>
         </div>
 
         <div class="gallery-item">
-            <img src="beds.jpg" alt="Custom Bed Frame">
-            <div class="gallery-caption">Custom Wood Bed</div>
+            <img src="beds.jpg" alt="beds">
+            <div class="gallery-caption">beds</div>
         </div>
 
         <div class="gallery-item">
-            <img src="shelf.jpg" alt="Custom Shelf Project">
-            <div class="gallery-caption">Custom Shelving</div>
+            <img src="shelf.jpg" alt="shelf">
+            <div class="gallery-caption">shelf</div>
         </div>
 
         <div class="gallery-item">
-            <img src="punisher.jpg" alt="Punisher Logo Woodwork">
-            <div class="gallery-caption">The Punisher Theme</div>
+            <img src="punisher.jpg" alt="punisher">
+            <div class="gallery-caption">punisher</div>
         </div>
 
     </div>
