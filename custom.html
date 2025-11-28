@@ -8,10 +8,15 @@
         * { box-sizing: border-box; }
         body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background-color: #1a1a1a; color: #e0e0e0; }
         
-        /* HEADER */
-        header img { width: 100%; height: auto; display: block; border-bottom: 4px solid #cda434; }
+        /* HEADER - Updated */
+        header img { 
+            width: 100%; 
+            height: auto; 
+            display: block; 
+            border-top: 4px solid #cda434;    
+            border-bottom: 4px solid #cda434; 
+        }
         
-        /* NAV */
         nav { background-color: #333; text-align: center; padding: 15px 0; border-bottom: 2px solid #cda434; }
         nav a { color: #cda434; text-decoration: none; margin: 0 20px; font-size: 18px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s; }
         nav a:hover { color: #fff; }
@@ -23,7 +28,6 @@
         
         label { display: block; margin-bottom: 10px; font-weight: bold; color: #cda434; margin-top: 10px; }
         
-        /* This styles inputs, text areas AND the new dropdown menus */
         input, textarea, select { 
             width: 100%; 
             padding: 12px; 
@@ -40,11 +44,14 @@
         .submit-btn { width: 100%; padding: 15px; background-color: #cda434; color: #000; font-weight: bold; font-size: 18px; border: none; cursor: pointer; text-transform: uppercase; transition: background 0.3s; margin-top: 10px; }
         .submit-btn:hover { background-color: #fff; }
         
-        footer { text-align: center; padding: 20px; background-color: #000; color: #666; margin-top: auto; }
+        /* FOOTER - Updated */
+        footer { text-align: center; padding: 30px; background-color: #000; color: #666; margin-top: auto; border-top: 1px solid #333; }
+        .contact-info { color: #cda434; font-weight: bold; margin-bottom: 10px; font-size: 1.1em; }
+        .contact-info span { margin: 0 10px; color: #fff; }
     </style>
 </head>
 <body>
-    <header><img src="images/header.jpg" alt="Frank Harley Custom Woodworking"></header>
+    <header><img src="images/header_logo.jpg" alt="Frank Harley Custom Woodworking"></header>
     <nav>
         <a href="index.html">HOME</a>
         <a href="gallery.html">GALLERY</a>
@@ -90,6 +97,11 @@
         </form>
     </div>
     
-    <footer>&copy; 2024 Frank Harley Custom Woodworking</footer>
+    <footer>
+        <div class="contact-info">
+            Phone: (555) 123-4567 <span>|</span> Email: frank@example.com
+        </div>
+        &copy; 2024 Frank Harley Custom Woodworking
+    </footer>
 </body>
 </html>

@@ -8,8 +8,14 @@
         * { box-sizing: border-box; }
         body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background-color: #1a1a1a; color: #e0e0e0; }
         
-        /* HEADER */
-        header img { width: 100%; height: auto; display: block; border-bottom: 4px solid #cda434; }
+        /* HEADER - Updated with Gold Border */
+        header img { 
+            width: 100%; 
+            height: auto; 
+            display: block; 
+            border-top: 4px solid #cda434;    
+            border-bottom: 4px solid #cda434; 
+        }
         
         /* NAV */
         nav { background-color: #333; text-align: center; padding: 15px 0; border-bottom: 2px solid #cda434; }
@@ -26,12 +32,15 @@
         .gallery-item:hover img { opacity: 1; }
         .gallery-caption { padding: 15px; text-align: center; background-color: #111; color: #cda434; font-weight: bold; text-transform: uppercase; }
         
-        footer { text-align: center; padding: 20px; background-color: #000; color: #666; margin-top: auto; }
+        /* FOOTER - Updated */
+        footer { text-align: center; padding: 30px; background-color: #000; color: #666; margin-top: auto; border-top: 1px solid #333; }
+        .contact-info { color: #cda434; font-weight: bold; margin-bottom: 10px; font-size: 1.1em; }
+        .contact-info span { margin: 0 10px; color: #fff; }
     </style>
 </head>
 <body>
 
-    <header><img src="images/header.jpg" alt="Frank Harley Custom Woodworking"></header>
+    <header><img src="images/header_logo.jpg" alt="Frank Harley Custom Woodworking"></header>
 
     <nav>
         <a href="index.html">HOME</a>
@@ -47,45 +56,42 @@
             <img src="images/beds.jpg" alt="Custom Beds">
             <div class="gallery-caption">Custom Beds</div>
         </div>
-
         <div class="gallery-item">
             <img src="images/family.jpg" alt="Family Sign">
             <div class="gallery-caption">Custom Decor</div>
         </div>
-
         <div class="gallery-item">
             <img src="images/home.jpg" alt="Home Decor">
             <div class="gallery-caption">Custom Decor</div>
         </div>
-
         <div class="gallery-item">
             <img src="images/jack.jpg" alt="Jack Sign">
             <div class="gallery-caption">Jack Sign</div>
         </div>
-
         <div class="gallery-item">
             <img src="images/live1.jpg" alt="Live Edge Table">
             <div class="gallery-caption">Live Edge Side Table</div>
         </div>
-
         <div class="gallery-item">
             <img src="images/punisher.jpg" alt="Punisher">
             <div class="gallery-caption">Punisher Cut Out</div>
         </div>
-
         <div class="gallery-item">
             <img src="images/live2.jpg" alt="Live Edge Coffee Table">
             <div class="gallery-caption">Live Edge Coffee Table</div>
         </div>
-
         <div class="gallery-item">
             <img src="images/shelf.jpg" alt="Wood Shelves">
             <div class="gallery-caption">Custom Shelves</div>
         </div>
-
     </div>
 
-    <footer>&copy; 2024 Frank Harley Custom Woodworking</footer>
+    <footer>
+        <div class="contact-info">
+            Phone: (555) 123-4567 <span>|</span> Email: frank@example.com
+        </div>
+        &copy; 2024 Frank Harley Custom Woodworking
+    </footer>
 
 </body>
 </html>
