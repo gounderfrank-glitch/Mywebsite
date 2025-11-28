@@ -5,179 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery - Frank Harley Custom Woodworking</title>
     <style>
-        /* --- RESET & BASICS --- */
+        /* --- GLOBAL STYLES --- */
         * { box-sizing: border-box; }
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #1a1a1a; 
-            color: #e0e0e0;
-        }
+        body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background-color: #1a1a1a; color: #e0e0e0; }
 
-        /* --- HEADER IMAGE --- */
-        header img {
-            width: 100%;
-            height: auto;
-            display: block;
-            border-bottom: 4px solid #cda434; /* Gold border below image */
-        }
+        /* --- HEADER & NAV --- */
+        header img { width: 100%; height: auto; display: block; border-bottom: 4px solid #cda434; }
+        nav { background-color: #333; text-align: center; padding: 15px 0; border-bottom: 2px solid #cda434; }
+        nav a { color: #cda434; text-decoration: none; margin: 0 20px; font-size: 18px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s; }
+        nav a:hover { color: #fff; }
+        nav a.active-page { color: #fff; text-decoration: underline; }
 
-        /* --- NAVIGATION --- */
-        nav {
-            background-color: #333; /* Dark Grey background matching your screenshot */
-            text-align: center;
-            padding: 15px 0;
-            border-bottom: 2px solid #cda434; /* Thin gold line under nav bar */
-        }
-        nav a {
-            color: #cda434; /* GOLD TEXT by default (Matches your screenshot) */
-            text-decoration: none;
-            margin: 0 20px;
-            font-size: 18px;
-            font-weight: bold;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #fff; /* Turns white when you mouse over it */
-        }
-        
-        /* This class makes the current page tab look "Active" (White & Underlined) */
-        nav a.active-page {
-            color: #fff;
-            text-decoration: underline;
-        }
+        /* --- GALLERY STYLES --- */
+        h1.page-title { text-align: center; margin: 40px 0 20px; color: #cda434; font-size: 2em; text-transform: uppercase; letter-spacing: 2px; }
+        .gallery-container { max-width: 1200px; margin: 0 auto 60px; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .gallery-item { background-color: #000; border: 1px solid #333; overflow: hidden; transition: transform 0.3s, border-color 0.3s; }
+        .gallery-item:hover { transform: translateY(-5px); border-color: #cda434; }
+        .gallery-item img { width: 100%; height: 300px; object-fit: cover; display: block; opacity: 0.9; transition: opacity 0.3s; }
+        .gallery-item:hover img { opacity: 1; }
+        .gallery-caption { padding: 15px; text-align: center; background-color: #111; color: #cda434; font-weight: bold; text-transform: uppercase; }
 
-        /* --- PAGE TITLE --- */
-        .page-title {
-            text-align: center;
-            margin: 40px 0 20px;
-            color: #cda434;
-            font-size: 2em;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        /* --- GALLERY GRID --- */
-        .gallery-container {
-            max-width: 1200px;
-            margin: 0 auto 60px;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .gallery-item {
-            position: relative;
-            background-color: #000;
-            border: 1px solid #333;
-            overflow: hidden;
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-5px);
-            border-color: #cda434;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            display: block;
-            opacity: 0.9;
-            transition: opacity 0.3s;
-        }
-
-        .gallery-item:hover img {
-            opacity: 1;
-        }
-
-        .gallery-caption {
-            padding: 15px;
-            text-align: center;
-            background-color: #111;
-            color: #cda434;
-            font-weight: bold;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            font-size: 1rem;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #000;
-            color: #666;
-            font-size: 0.8rem;
-            margin-top: auto;
-        }
+        footer { text-align: center; padding: 20px; background-color: #000; color: #666; margin-top: auto; }
     </style>
 </head>
 <body>
 
-    <header>
-        <img src="images/header.jpg" alt="Frank Harley Custom Woodworking">
-    </header>
+    <header><img src="images/header.jpg" alt="Frank Harley Custom Woodworking"></header>
 
     <nav>
         <a href="index.html">HOME</a>
-        <a href="gallery.html" class="active-page">GALLERY</a> <a href="contact.html">CUSTOM ORDERS</a>
-        <a href="plans.html">SHOP PLANS</a>
+        <a href="gallery.html" class="active-page">GALLERY</a>
+        <a href="custom.html">CUSTOM ORDERS</a>
+        <a href="shop.html">SHOP PLANS</a>
     </nav>
 
     <h1 class="page-title">Current Projects</h1>
 
     <div class="gallery-container">
-
-        <div class="gallery-item">
-            <img src="images/live2.jpg" alt="Live Edge Coffee Table">
-            <div class="gallery-caption">Live Edge Coffee Table</div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/jack.jpg" alt="Jack Sign">
-            <div class="gallery-caption">Jack Sign</div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/live1.jpg" alt="Live Edge Side Table">
-            <div class="gallery-caption">Live Edge Side Table</div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/home.jpg" alt="Custom Decor">
-            <div class="gallery-caption">Custom Decor</div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/family.jpg" alt="Custom Decor">
-            <div class="gallery-caption">Custom Decor</div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/beds.jpg" alt="Custom Beds">
-            <div class="gallery-caption">Custom Beds</div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/shelf.jpg" alt="Custom Phone Stands & Shelves">
-            <div class="gallery-caption">Custom Phone Stands & Live Edge Shelves</div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/punisher.jpg" alt="Punisher Cut Out">
-            <div class="gallery-caption">Punisher Cut Out</div>
-        </div>
-
+        <div class="gallery-item"><img src="images/live2.jpg" alt="Live Edge Coffee Table"><div class="gallery-caption">Live Edge Coffee Table</div></div>
+        <div class="gallery-item"><img src="images/jack.jpg" alt="Jack Sign"><div class="gallery-caption">Jack Sign</div></div>
+        <div class="gallery-item"><img src="images/live1.jpg" alt="Live Edge Side Table"><div class="gallery-caption">Live Edge Side Table</div></div>
+        <div class="gallery-item"><img src="images/home.jpg" alt="Custom Decor"><div class="gallery-caption">Custom Decor</div></div>
+        <div class="gallery-item"><img src="images/family.jpg" alt="Custom Decor"><div class="gallery-caption">Custom Decor</div></div>
+        <div class="gallery-item"><img src="images/beds.jpg" alt="Custom Beds"><div class="gallery-caption">Custom Beds</div></div>
+        <div class="gallery-item"><img src="images/shelf.jpg" alt="Custom Phone Stands & Shelves"><div class="gallery-caption">Custom Phone Stands & Live Edge Shelves</div></div>
+        <div class="gallery-item"><img src="images/punisher.jpg" alt="Punisher Cut Out"><div class="gallery-caption">Punisher Cut Out</div></div>
     </div>
 
-    <footer>
-        &copy; 2024 Frank Harley Custom Woodworking
-    </footer>
-
+    <footer>&copy; 2024 Frank Harley Custom Woodworking</footer>
 </body>
 </html>

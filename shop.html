@@ -2,55 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Shop Plans - Frank's CNC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Plans - Frank Harley Custom Woodworking</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; background-image: url('images/wood_bg.jpg'); background-size: cover; background-attachment: fixed; background-position: center; color: #f0f0f0; }
-        header { padding: 0; margin: 0; border-bottom: 4px solid #d4a017; background-color: #111; }
-        .header-logo { width: 100%; max-width: 100%; height: auto; display: block; }
-        
-        nav { background-color: #333; padding: 15px 0; text-align: center; border-bottom: 1px solid #444; }
-        .nav-link { color: #d4a017; text-decoration: none; font-size: 1.2em; margin: 0 20px; font-weight: bold; text-transform: uppercase; }
-        .nav-link:hover { color: #fff; }
-        .nav-link.active { color: #fff; border-bottom: 2px solid #fff; }
+        /* --- GLOBAL STYLES --- */
+        * { box-sizing: border-box; }
+        body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background-color: #1a1a1a; color: #e0e0e0; }
 
-        .container { max-width: 1000px; margin: 0 auto; padding: 20px; background-color: rgba(0,0,0,0.85); margin-top: 30px; border-radius: 10px; border: 1px solid #444; }
-        .shop-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 30px; }
-        .product-card { background: #222; border: 1px solid #444; border-radius: 8px; padding: 15px; text-align: center; transition: transform 0.2s; }
-        .product-card:hover { transform: translateY(-5px); border-color: #d4a017; }
-        .product-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 5px; margin-bottom: 10px; }
-        .price { font-size: 1.5em; color: #d4a017; font-weight: bold; margin: 10px 0; display: block; }
-        .buy-btn { background-color: #d4a017; color: black; padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 5px; display: inline-block; width: 80%; }
+        /* --- HEADER & NAV --- */
+        header img { width: 100%; height: auto; display: block; border-bottom: 4px solid #cda434; }
+        nav { background-color: #333; text-align: center; padding: 15px 0; border-bottom: 2px solid #cda434; }
+        nav a { color: #cda434; text-decoration: none; margin: 0 20px; font-size: 18px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s; }
+        nav a:hover { color: #fff; }
+        nav a.active-page { color: #fff; text-decoration: underline; }
+
+        /* --- PLANS LAYOUT --- */
+        h1.page-title { text-align: center; margin: 40px 0 20px; color: #cda434; font-size: 2em; text-transform: uppercase; letter-spacing: 2px; }
+        .plans-container { max-width: 1200px; margin: 0 auto; padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .plan-card { background-color: #000; padding: 20px; border: 1px solid #333; text-align: center; }
+        .plan-title { color: #fff; font-size: 1.5em; margin-bottom: 10px; }
+        .plan-price { color: #cda434; font-size: 1.2em; font-weight: bold; margin-bottom: 20px; display: block; }
+        .buy-btn { background-color: #cda434; color: #000; padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 4px; display: inline-block; }
         .buy-btn:hover { background-color: #fff; }
-        .section-title { border-bottom: 2px solid #444; padding-bottom: 10px; margin-top: 50px; color: #fff; text-transform: uppercase; letter-spacing: 1px; }
-        .tag { background: #444; color: #fff; padding: 4px 8px; font-size: 0.8em; border-radius: 4px; display: inline-block; margin-bottom: 10px; }
-        .tag-digital { background: #007acc; } .tag-physical { background: #28a745; }
+
+        footer { text-align: center; padding: 20px; background-color: #000; color: #666; margin-top: 50px; }
     </style>
 </head>
 <body>
-    <header>
-        <img src="images/header_logo.jpg" alt="Frank Harley Custom Woodworking" class="header-logo">
-        <nav>
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="gallery.html" class="nav-link">Gallery</a>
-            <a href="custom.html" class="nav-link">Custom Orders</a>
-            <a href="shop.html" class="nav-link active">Shop Plans</a>
-        </nav>
-    </header>
 
-    <div class="container">
-        <h2 class="section-title">Physical Products (Made to Order)</h2>
-        <div class="shop-grid">
-            <div class="product-card"><span class="tag tag-physical">Shipped Item</span><img src="images/table.jpg"><h3>"Hybrid" Coffee Table</h3><span class="price">$450.00</span><a href="#" class="buy-btn">Order Now</a></div>
-            <div class="product-card"><span class="tag tag-physical">Shipped Item</span><img src="images/art.jpg"><h3>Parametric Wall Art</h3><span class="price">$300.00</span><a href="#" class="buy-btn">Order Now</a></div>
-            <div class="product-card"><span class="tag tag-physical">Shipped Item</span><img src="images/rhino.jpg"><h3>Geometric Shelf</h3><span class="price">$185.00</span><a href="#" class="buy-btn">Order Now</a></div>
+    <header><img src="images/header.jpg" alt="Frank Harley Custom Woodworking"></header>
+
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="custom.html">CUSTOM ORDERS</a>
+        <a href="shop.html" class="active-page">SHOP PLANS</a>
+    </nav>
+
+    <h1 class="page-title">Digital Shop Plans</h1>
+
+    <div class="plans-container">
+        <div class="plan-card">
+            <div class="plan-title">Basic Table Plan</div>
+            <span class="plan-price">$10.00</span>
+            <br>
+            <a href="#" class="buy-btn">Buy Now</a>
+        </div>
+        
+        <div class="plan-card">
+            <div class="plan-title">CNC Sign Template</div>
+            <span class="plan-price">$15.00</span>
+            <br>
+            <a href="#" class="buy-btn">Buy Now</a>
         </div>
 
-        <h2 class="section-title" style="margin-top: 60px;">Digital Plans (Download)</h2>
-        <div class="shop-grid">
-            <div class="product-card"><span class="tag tag-digital">Instant Download</span><img src="images/long flatpack bench.jpg"><h3>Bench Vectors</h3><span class="price">$15.00</span><a href="#" class="buy-btn">Buy Files</a></div>
-            <div class="product-card"><span class="tag tag-digital">Instant Download</span><img src="images/flag.jpg"><h3>3D Flag Model</h3><span class="price">$15.00</span><a href="#" class="buy-btn">Buy Model</a></div>
-            <div class="product-card"><span class="tag tag-digital">Instant Download</span><img src="images/coaster.jpg"><h3>Coaster Vectors</h3><span class="price">$10.00</span><a href="#" class="buy-btn">Buy Files</a></div>
+        <div class="plan-card">
+            <div class="plan-title">Bed Frame Blueprints</div>
+            <span class="plan-price">$25.00</span>
+            <br>
+            <a href="#" class="buy-btn">Buy Now</a>
         </div>
     </div>
+
+    <footer>&copy; 2024 Frank Harley Custom Woodworking</footer>
 </body>
 </html>
