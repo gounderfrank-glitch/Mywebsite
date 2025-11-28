@@ -15,22 +15,23 @@
             color: #e0e0e0;
         }
 
-        /* --- HEADER --- */
+        /* --- HEADER IMAGE --- */
         header img {
             width: 100%;
             height: auto;
             display: block;
-            border-bottom: 4px solid #cda434;
+            border-bottom: 4px solid #cda434; /* Gold border below image */
         }
 
         /* --- NAVIGATION --- */
         nav {
-            background-color: #000;
+            background-color: #333; /* Dark Grey background matching your screenshot */
             text-align: center;
             padding: 15px 0;
+            border-bottom: 2px solid #cda434; /* Thin gold line under nav bar */
         }
         nav a {
-            color: #fff;
+            color: #cda434; /* GOLD TEXT by default (Matches your screenshot) */
             text-decoration: none;
             margin: 0 20px;
             font-size: 18px;
@@ -40,7 +41,13 @@
             transition: color 0.3s;
         }
         nav a:hover {
-            color: #cda434;
+            color: #fff; /* Turns white when you mouse over it */
+        }
+        
+        /* This class makes the current page tab look "Active" (White & Underlined) */
+        nav a.active-page {
+            color: #fff;
+            text-decoration: underline;
         }
 
         /* --- PAGE TITLE --- */
@@ -118,9 +125,8 @@
 
     <nav>
         <a href="index.html">HOME</a>
-        <a href="gallery.html">GALLERY</a>
+        <a href="gallery.html" class="active-page">GALLERY</a> <a href="contact.html">CUSTOM ORDERS</a>
         <a href="plans.html">SHOP PLANS</a>
-        <a href="contact.html">CUSTOM ORDERS</a>
     </nav>
 
     <h1 class="page-title">Current Projects</h1>
