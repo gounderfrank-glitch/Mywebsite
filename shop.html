@@ -1,4 +1,108 @@
-<h1 class="section-title">Digital Downloads (CNC & Woodworking Plans)</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Frank Harley Custom Woodworking</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background-color: #1a1a1a; color: #e0e0e0; }
+        
+        /* HEADER */
+        header img { 
+            width: 100%; 
+            height: auto; 
+            display: block; 
+            border-top: 4px solid #cda434;    
+            border-bottom: 4px solid #cda434; 
+        }
+        
+        nav { background-color: #333; text-align: center; padding: 15px 0; border-bottom: 2px solid #cda434; }
+        nav a { color: #cda434; text-decoration: none; margin: 0 20px; font-size: 18px; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s; }
+        nav a:hover { color: #fff; }
+        nav a.active-page { color: #fff; text-decoration: underline; }
+        
+        h1.section-title { text-align: center; margin: 50px 0 20px; color: #cda434; font-size: 1.8em; text-transform: uppercase; letter-spacing: 2px; border-bottom: 1px solid #333; padding-bottom: 10px; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .shop-container { max-width: 1200px; margin: 0 auto 30px; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        
+        /* CARDS */
+        .shop-card { background-color: #000; border: 1px solid #333; overflow: hidden; text-align: center; transition: transform 0.3s, border-color 0.3s; padding: 15px; }
+        .shop-card:hover { transform: translateY(-5px); border-color: #cda434; box-shadow: 0 0 20px rgba(205, 164, 52, 0.4); }
+        .shop-card img { width: 100%; height: 200px; object-fit: cover; display: block; margin-bottom: 15px; border-radius: 4px; }
+        .shop-card:hover img { opacity: 1; }
+        
+        /* INFO & BUTTONS */
+        .item-title { color: #fff; font-size: 1.3em; margin-bottom: 10px; font-weight: bold; }
+        .item-price { color: #cda434; font-size: 1.2em; font-weight: bold; margin-bottom: 15px; display: block; }
+        .buy-btn { background-color: #cda434; color: #000; padding: 8px 25px; text-decoration: none; font-weight: bold; border-radius: 4px; display: inline-block; text-transform: uppercase; font-size: 0.9em; transition: background 0.3s; }
+        .buy-btn:hover { background-color: #fff; }
+
+        /* FOOTER */
+        footer { text-align: center; padding: 30px; background-color: #000; color: #666; margin-top: 30px; border-top: 1px solid #333; }
+        .contact-info { color: #cda434; font-weight: bold; margin-bottom: 10px; font-size: 1.1em; }
+        .contact-info span { margin: 0 10px; color: #fff; }
+    </style>
+</head>
+<body>
+    <header><img src="images/header_logo.jpg" alt="Frank Harley Custom Woodworking"></header>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="custom.html">CUSTOM</a>
+        <a href="shop.html" class="active-page">SHOP</a>
+    </nav>
+
+    <h1 class="section-title">Physical Flatpack Furniture (Ready to Ship)</h1>
+    <div class="shop-container">
+        <div class="shop-card">
+            <img src="images/bench.jpg" alt="Long Flatpack Bench">
+            <div class="item-title">Long Flatpack Bench</div>
+            <span class="item-price">$3,000.00</span> <a href="custom.html" class="buy-btn">Buy Now</a>
+        </div>
+
+        <div class="shop-card">
+            <img src="images/clock.jpg" alt="Custom Wood Clock">
+            <div class="item-title">Custom Wood Clock</div>
+            <span class="item-price">$250.00</span> <a href="custom.html" class="buy-btn">Buy Now</a>
+        </div>
+        
+        <div class="shop-card">
+            <img src="images/beds.jpg" alt="Flatpack Bed">
+            <div class="item-title">Custom Flatpack Bed</div>
+            <span class="item-price">$250.00</span> <a href="custom.html" class="buy-btn">Buy Now</a>
+        </div>
+        
+        <div class="shop-card">
+            <img src="images/shelf.jpg" alt="Flatpack Shelving">
+            <div class="item-title">Modular Shelving Unit</div>
+            <span class="item-price">$50.00</span> <a href="custom.html" class="buy-btn">Buy Now</a>
+        </div>
+
+        <div class="shop-card">
+            <img src="images/live2.jpg" alt="Flatpack Table">
+            <div class="item-title">Ready-to-Assemble Table</div>
+            <span class="item-price">$299.00</span>
+            <a href="custom.html" class="buy-btn">Buy Now</a>
+        </div>
+    </div>
+
+    <h1 class="section-title">Home Decor & Signs (Ready to Ship)</h1>
+    <div class="shop-container">
+        <div class="shop-card">
+            <img src="images/decor1.jpg" alt="Decor Item"> 
+            <div class="item-title">Custom Sign</div>
+            <span class="item-price">$45.00</span>
+            <a href="custom.html" class="buy-btn">Buy Now</a>
+        </div>
+        <div class="shop-card">
+            <img src="images/decor2.jpg" alt="Decor Item">
+            <div class="item-title">Small Clock</div>
+            <span class="item-price">$80.00</span>
+            <a href="custom.html" class="buy-btn">Buy Now</a>
+        </div>
+    </div>
+
+    <h1 class="section-title">Digital Downloads (CNC & Woodworking Plans)</h1>
     <div class="shop-container">
         <div class="shop-card">
             <img src="images/table.jpg" alt="Table Plan">
@@ -20,8 +124,7 @@
         </div>
 
         <div class="shop-card">
-            <img src="images/1776.jpg" alt="1776 Design"> 
-            <div class="item-title">1776 Patriot Design</div>
+            <img src="images/1776percent.jpg" alt="1776 Design"> <div class="item-title">1776 Patriot Design</div>
             <span class="item-price">$5.00</span>
             <a href="#" class="buy-btn">Download</a>
         </div>
@@ -47,3 +150,12 @@
             <a href="#" class="buy-btn">Download</a>
         </div>
     </div>
+    
+    <footer>
+        <div class="contact-info">
+            Phone: 206-465-8772 <span>|</span> Email: gounderfrank@gmail.com
+        </div>
+        &copy; 2024 Frank Harley Custom Woodworking
+    </footer>
+</body>
+</html>
